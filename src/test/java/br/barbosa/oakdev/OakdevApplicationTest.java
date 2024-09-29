@@ -4,10 +4,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OakdevApplicationTests {
+class OakdevApplicationTest {
 
-	@Test
-	void contextLoads() {
-	}
+  @Test
+  void contextLoads() {
+  }
 
+  @Test
+  void main() {
+    OakdevApplication.main(new String[] {});
+  }
 }

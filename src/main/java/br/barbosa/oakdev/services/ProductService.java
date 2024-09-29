@@ -1,34 +1,37 @@
 package br.barbosa.oakdev.services;
 
 import java.util.List;
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Service;
-
 import br.barbosa.oakdev.entities.Product;
-import br.barbosa.oakdev.repositories.ProductRepository;
 
-@Service
-public class ProductService {
+public interface ProductService {
 
-  @Autowired
-  private ProductRepository productRepository;
+  /**
+   * Retorna todos os produtos disponíveis, ordenados pelo preço.
+   *
+   * @return lista de produtos
+   */
+  List<Product> findAll();
 
-  public List<Product> findAll() {
-    return productRepository.findAll(Sort.by("price").ascending());
-  }
+  /**
+   * Salva um novo produto ou atualiza um produto existente.
+   *
+   * @param product o produto a ser salvo
+   * @return o produto salvo
+   */
+  Product save(Product product);
 
-  public Product save(Product product) {
-    return productRepository.save(product);
-  }
+  /**
+   * Exclui um produto pelo ID.
+   *
+   * @param id ID do produto a ser excluído
+   */
+  void deleteById(Long id);
 
-  public void deleteById(Long id) {
-    productRepository.deleteById(id);
-  }
-
-  public Optional<Product> findById(Long id) {
-    return productRepository.findById(id);
-  }
+  /**
+   * Busca um produto pelo ID.
+   *
+   * @param id ID do produto a ser buscado
+   * @return o produto encontrado
+   */
+  Product findById(Long id);
 }
