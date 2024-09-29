@@ -2,11 +2,12 @@
 
 Prova experimental de qualificação de candidato Estágio de desenvolvimento na Oak tecnologia
 
-Deploy: `https://oak-dev-backend.onrender.com/swagger-ui/index.html`
-
-Frontend: `https://oakdev.netlify.app/`
-
 CRUD Produtos.
+
+Deploy: https://oak-dev-backend.onrender.com/swagger-ui/index.html
+
+Frontend: https://oakdev.netlify.app/
+
 
 <br>
 
@@ -210,9 +211,9 @@ CRUD Produtos.
 
 A API estará disponível em:
 
- `http://localhost:8080/`
+ http://localhost:8080/
 
- `https://oak-dev-backend.onrender.com/swagger-ui/index.html`
+ https://oak-dev-backend.onrender.com/swagger-ui/index.html
 
 ## License
 
